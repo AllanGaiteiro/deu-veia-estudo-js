@@ -1,0 +1,71 @@
+#game-board {
+    right: calc((100%/2) - 150px) ;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #eee;
+    border: 3px solid #333;
+    box-shadow: 0 0 10px #ccc;
+    z-index: 2;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 96px;
+    height: 96px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.cell:nth-child(3n+1) {
+    border-left: none;
+}
+
+.cell:nth-child(-n+3) {
+    border-top: none;
+}
+
+.cell:nth-child(n+7) {
+    border-bottom: none;
+}
+
+.cell:nth-child(9n+1) {
+    border-left: none;
+    border-top: none;
+}
+
+.cell:first-child {
+    border-left: none;
+    border-top: none;
+}
+
+.cell:last-child {
+    border-right: none;
+    border-bottom: none;
+}
+
+.player-x {
+    color: #f00;
+}
+
+.player-o {
+    color: #00f;
+}
+
+.win {
+    background-color: #afa;
+}
+
+/* Estilo para célula vencedora */
+.winner-cell {
+    background-color: yellow;
+    transition: background-color 0.5s ease-in-out;
+  }

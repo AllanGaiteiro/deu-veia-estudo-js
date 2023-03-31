@@ -5,10 +5,34 @@
     <meta charset="UTF-8">
     <title>Jogo da Velha</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gameboard.css">
+    <link rel="stylesheet" href="scoreboard.css">
 </head>
 
 <body>
+    <div id="background-x">
+        <div id="x" class="symbol"></div>
+    </div>
+    <div id="background-o">
+        <div id="o" class="symbol"></div>
+    </div>
     <h1>Jogo da Velha</h1>
+    <div class="scoreboard">
+        <div class="scoreboard__player">
+            <div class="scoreboard__player-name">Player X</div>
+            <div class="scoreboard__player-score" id="player-x-score">0</div>
+        </div>
+        <div class="scoreboard__player">
+            <div class="scoreboard__player-name">Player O</div>
+            <div class="scoreboard__player-score" id="player-o-score">0</div>
+        </div>
+    </div>
+    <div id="level-container" class="level-container">
+        <p>Choose difficulty:</p>
+        <button id="easy-btn" class="level-btn active">Easy</button>
+        <button id="medium-btn" class="level-btn">Medium</button>
+        <button id="hard-btn" class="level-btn">Hard</button>
+    </div>
     <div id="game-board">
         <div class="cell"></div>
         <div class="cell"></div>
@@ -20,14 +44,8 @@
         <div class="cell"></div>
         <div class="cell"></div>
     </div>
-    <div id="messages"></div>
-    <div id="difficulty-buttons">
-        <button id="easy-button" class="difficulty-button">Fácil</button>
-        <button id="medium-button" class="difficulty-button">Médio</button>
-        <button id="hard-button" class="difficulty-button">Difícil</button>
-    </div>
-    <div id="difficulty-display"></div>
-    <script src="./script.js"></script>
+
+    <script src="./gameboard.js"></script>
     <script src="./mecanic.js"></script>
 </body>
 
